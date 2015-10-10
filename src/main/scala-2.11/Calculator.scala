@@ -10,8 +10,6 @@ object Calculator {
       case num: NumberFormatException => println("You must enter a number without decimal point")
       case _: Exception => println("Error has occurred")
     }
-
-
   }
 
   /**
