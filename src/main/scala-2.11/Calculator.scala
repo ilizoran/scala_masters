@@ -24,11 +24,11 @@ object Calculator {
    */
   @tailrec
   def calculate(x: Int): Int = {
-    val operate = io.StdIn.readLine("Enter operator")
+    val operate = io.StdIn.readLine("Enter operator: ")
     if(operate == "="){
       x
     }else{
-      val newNumber: Int = io.StdIn.readLine("Enter number").toInt
+      val newNumber: Int = io.StdIn.readLine("Enter number: ").toInt
       val result: Int = operate match {
         case "+" => x + newNumber
         case "-" => x - newNumber
@@ -36,7 +36,7 @@ object Calculator {
         case "/" => x / newNumber
         case _   => x + newNumber
       }
-      return this.calculate(result)
+      this.calculate(result)
     }
   }
 
